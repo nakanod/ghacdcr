@@ -39,7 +39,7 @@ jobs:
 
       - name: 'Render templatised config manifests'
         run: |-
-          export PROJECT_ID="${{ vars.GCP_PROJECT_ID }}"
+          export PROJECT_ID="${{ secrets.GCP_PROJECT_ID }}"
           export REGION="${{ vars.GAR_LOCATION }}"
           for template in $(ls config/*.template.yaml); do envsubst < ${template} > ${template%%.*}.yaml ; done
 
@@ -60,7 +60,7 @@ jobs:
           region: '${{ vars.GAR_LOCATION }}'
           description: '${{ env.GITHUB_COMMIT_MSG }}'
           skaffold_file: 'config/skaffold.yaml'
-          images: 'app=${{ vars.GAR_LOCATION }}-docker.pkg.dev/${{ vars.GCP_PROJECT_ID }}/${{ vars.APP }}/${{ vars.APP }}:${{ github.sha }}'
+          images: 'app=${{ vars.GAR_LOCATION }}-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/${{ vars.APP }}/${{ vars.APP }}:${{ github.sha }}'
 
       - name: 'Report Cloud Deploy release'
         run: |-
