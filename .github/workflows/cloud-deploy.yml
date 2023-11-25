@@ -41,6 +41,7 @@ jobs:
         run: |-
           export PROJECT_ID="${{ secrets.GCP_PROJECT_ID }}"
           export REGION="${{ vars.GAR_LOCATION }}"
+          export APP="${{ vars.APP }}"
           for template in $(ls config/*.template.yaml); do envsubst < ${template} > ${template%%.*}.yaml ; done
 
       - name: 'Create Cloud Deploy delivery pipeline'
