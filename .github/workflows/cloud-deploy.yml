@@ -1,6 +1,9 @@
 name: Example Action
 
-on: push
+on: 
+  push:
+    branches:
+      - ${{ github.event.repository.default_branch }}
 
 jobs:
   deploy:
