@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"os"
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, World")
+	message := "Hello, world on " + os.Getenv("ENV")
+	fmt.Fprintf(w, message)
 }
 
 func main() {
