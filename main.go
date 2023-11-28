@@ -7,8 +7,7 @@ import (
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	message := "Hello, world on " + os.Getenv("ENV")
-	fmt.Fprintf(w, message)
+	fmt.Fprintf(w, "Hello, world on %s\n", os.Getenv("ENV"))
 }
 
 func main() {
