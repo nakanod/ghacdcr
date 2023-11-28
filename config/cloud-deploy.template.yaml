@@ -19,7 +19,11 @@ run:
   location: 'projects/${PROJECT_ID}/locations/${REGION}'
 executionConfigs:
 - usages:
-  - [RENDER | PREDEPLOY | DEPLOY | VERIFY | POSTDEPLOY]
+  - RENDER
+  - PREDEPLOY
+  - DEPLOY
+  - VERIFY
+  - POSTDEPLOY
   serviceAccount: ${RUN_SERVICE_ACCOUNT}
 ---
 apiVersion: deploy.cloud.google.com/v1
@@ -32,5 +36,9 @@ run:
   location: 'projects/${PROJECT_ID}/locations/${REGION}'
 executionConfigs:
 - usages:
-  - [RENDER | PREDEPLOY | DEPLOY | VERIFY | POSTDEPLOY]
+  - RENDER
+  - PREDEPLOY
+  - DEPLOY
+  - VERIFY
+  - POSTDEPLOY
   serviceAccount: ${RUN_SERVICE_ACCOUNT}
