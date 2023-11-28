@@ -18,7 +18,9 @@ description: 'Staging target'
 run:
   location: 'projects/${PROJECT_ID}/locations/${REGION}'
 executionConfigs:
-- serviceAccount: ${RUN_SERVICE_ACCOUNT}
+- usages:
+  - [RENDER | PREDEPLOY | DEPLOY | VERIFY | POSTDEPLOY]
+  serviceAccount: ${RUN_SERVICE_ACCOUNT}
 ---
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
@@ -29,4 +31,6 @@ requireApproval: true
 run:
   location: 'projects/${PROJECT_ID}/locations/${REGION}'
 executionConfigs:
-- serviceAccount: ${RUN_SERVICE_ACCOUNT}
+- usages:
+  - [RENDER | PREDEPLOY | DEPLOY | VERIFY | POSTDEPLOY]
+  serviceAccount: ${RUN_SERVICE_ACCOUNT}
