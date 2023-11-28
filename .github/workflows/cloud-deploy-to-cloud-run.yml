@@ -1,4 +1,4 @@
-name: Example Action
+name: Cloud Deploy to Cloud Run
 
 on: 
   push:
