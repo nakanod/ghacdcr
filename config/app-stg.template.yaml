@@ -15,3 +15,5 @@ spec:
         env:
           - name: 'ENV'
             value: 'Stg'
+          - name: 'TAG'
+            value: '${GITHUB_SHA}'
