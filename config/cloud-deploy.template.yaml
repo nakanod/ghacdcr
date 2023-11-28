@@ -23,5 +23,6 @@ kind: Target
 metadata:
   name: 'prod'
 description: 'Production target'
+requireApproval: true
 run:
   location: 'projects/${PROJECT_ID}/locations/${REGION}'
