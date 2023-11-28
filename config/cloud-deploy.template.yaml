@@ -2,19 +2,19 @@ apiVersion: deploy.cloud.google.com/v1
 kind: DeliveryPipeline
 metadata:
   name: '${APP}'
-description: 'Deployment pipeline for demo app'
+description: 'Deployment pipeline for ${APP}'
 serialPipeline:
   stages:
-    - targetId: 'dev'
-      profiles: ['dev']
+    - targetId: 'stg'
+      profiles: ['stg']
     - targetId: 'prod'
       profiles: ['prod']
 ---
 apiVersion: deploy.cloud.google.com/v1
 kind: Target
 metadata:
-  name: 'dev'
-description: 'Development target'
+  name: 'stg'
+description: 'Staging target'
 run:
   location: 'projects/${PROJECT_ID}/locations/${REGION}'
 ---

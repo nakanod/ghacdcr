@@ -5,10 +5,10 @@ metadata:
 deploy:
   cloudrun: {}
 profiles:
-  - name: 'dev'
+  - name: 'stg'
     manifests:
       rawYaml:
-        - 'app-dev.yaml'
+        - 'app-stg.yaml'
   - name: 'prod'
     manifests:
       rawYaml:
