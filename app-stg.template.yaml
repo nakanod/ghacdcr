@@ -13,7 +13,7 @@ spec:
       - name: '${APP}'
         image: 'app'
         env:
-          - name: 'ENV'
+          - name: 'TARGET'
             value: 'Stg'
           - name: 'TAG'
             value: '${TAG}'
