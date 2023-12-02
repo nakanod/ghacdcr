@@ -15,5 +15,5 @@ spec:
         env:
           - name: 'TARGET'
             value: 'Stg'
-          - name: 'TAG'
-            value: '${TAG}'
+          - name: 'SHA'
+            value: '${SHA}'

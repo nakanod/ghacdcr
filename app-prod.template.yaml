@@ -15,5 +15,5 @@ spec:
         env:
           - name: 'TARGET'
             value: 'Prod'
-          - name: 'TAG'
-            value: '${TAG}'
+          - name: 'SHA'
+            value: '${SHA}'
