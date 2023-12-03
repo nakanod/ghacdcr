@@ -9,6 +9,7 @@ spec:
         autoscaling.knative.dev/maxScale: '1'
         run.googleapis.com/execution-environment: gen2
     spec:
+      serviceAccountName: ${RUN_SERVICE_ACCOUNT}
       containers:
       - name: '${APP}'
         image: 'app'

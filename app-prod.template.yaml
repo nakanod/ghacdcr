@@ -10,6 +10,7 @@ spec:
         run.googleapis.com/execution-environment: gen2
     spec:
       containerConcurrency: 100
+      serviceAccountName: ${RUN_SERVICE_ACCOUNT}
       containers:
       - name: '${APP}'
         image: 'app'
