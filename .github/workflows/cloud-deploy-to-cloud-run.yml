@@ -56,7 +56,7 @@ jobs:
 
       - name: 'Create Cloud Deploy release'
         id: 'release'
-        uses: 'google-github-actions/create-cloud-deploy-release@v0'
+        uses: 'google-github-actions/create-cloud-deploy-release@v1'
         with:
           delivery_pipeline: '${{ vars.APP }}'
           name: '${{ env.RELEASE_NAME }}'
