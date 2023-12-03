@@ -9,6 +9,7 @@ spec:
         autoscaling.knative.dev/maxScale: '1'
         run.googleapis.com/execution-environment: gen2
     spec:
+      containerConcurrency: 100
       containers:
       - name: '${APP}'
         image: 'app'
