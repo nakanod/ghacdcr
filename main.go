@@ -7,7 +7,7 @@ import (
 )
 
 func hello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, world on %s %s\n", os.Getenv("TARGET"), os.Getenv("SHA"))
+	fmt.Fprintf(w, "Hello, world %s %s\n", os.Getenv("TARGET"), os.Getenv("SHA"))
 }
 
 func main() {
